@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "Clean Copy",
+  "version": "0.1.0",
+  "description": "Clean links and quotations, copied locally.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "clipboardWrite"
+  ],
+  "background": {
+    "scripts": [
+      "core.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Copy clean link",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "options_ui": {
+    "page": "editor.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "copy-clean": {
+      "description": "Copy clean link"
+    },
+    "edit-clean": {
+      "description": "Edit before copying"
+    }
+  }
+}
